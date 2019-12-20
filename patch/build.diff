@@ -1,0 +1,15 @@
+diff --git a/make/target/product/emulator.mk b/make/target/product/emulator.mk
+index 0e1e581..ef2b8aa 100644
+--- a/make/target/product/emulator.mk
++++ b/make/target/product/emulator.mk
+@@ -104,6 +104,10 @@ PRODUCT_PACKAGES += \
+     android.hardware.gatekeeper@1.0-impl \
+     android.hardware.gatekeeper@1.0-service
+ 
++PRODUCT_PACKAGES += \
++    android.hardware.test@1.0-impl \
++    android.hardware.test@1.0-service
++
+ # need this for gles libraries to load properly
+ # after moving to /vendor/lib/
+ PRODUCT_PACKAGES += \

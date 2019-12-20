@@ -1,0 +1,21 @@
+diff --git a/generic/goldfish/manifest.xml b/generic/goldfish/manifest.xml
+index 7dbe6b57..5d428175 100644
+--- a/generic/goldfish/manifest.xml
++++ b/generic/goldfish/manifest.xml
+@@ -180,6 +180,16 @@
+             <instance>slot1</instance>
+         </interface>
+     </hal>
++
++    <hal format="hidl">
++        <name>android.hardware.test</name>
++        <transport>hwbinder</transport>
++        <version>1.0</version>
++        <interface>
++        <name>ITest</name>
++            <instance>default</instance>
++        </interface>
++    </hal>
+     <sepolicy>
+         <version>27.0</version>
+     </sepolicy>
