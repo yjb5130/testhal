@@ -33,7 +33,7 @@ public:
 };
 
 // FIXME: most likely delete, this is only for passthrough implementations
-extern "C" ITest* HIDL_FETCH_ITest(const char* name);
+//extern "C" ITest* HIDL_FETCH_ITest(const char* name);
 
 }  // namespace implementation
 }  // namespace V1_0

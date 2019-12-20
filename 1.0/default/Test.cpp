@@ -30,9 +30,9 @@ Return<void> Test::testhal() {
 
 // Methods from ::android::hidl::base::V1_0::IBase follow.
 
-ITest* HIDL_FETCH_ITest(const char* /* name */) {
-    return new Test();
-}
+//ITest* HIDL_FETCH_ITest(const char* /* name */) {
+//    return new Test();
+//}
 
 }  // namespace implementation
 }  // namespace V1_0
