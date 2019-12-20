@@ -1,0 +1,6 @@
+package android.hardware.test@1.0;
+
+interface ITest
+{
+    testhal();
+};

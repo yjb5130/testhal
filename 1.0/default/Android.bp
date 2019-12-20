@@ -1,0 +1,38 @@
+cc_library_shared {
+    name: "android.hardware.test@1.0-impl",
+    relative_install_path: "hw",
+    proprietary: true,
+    srcs: [
+        "Test.cpp",
+    ],
+    shared_libs: [
+        "libhidlbase",
+        "libhidltransport",
+        "liblog",
+        "libbinder",
+        "libhwbinder",
+        "libutils",
+        "libhardware",
+        "android.hardware.test@1.0",
+    ],
+}
+
+cc_binary {
+    name: "android.hardware.test@1.0-service",
+    relative_install_path: "hw",
+    proprietary: true,
+    defaults: ["hidl_defaults"],
+    init_rc: ["android.hardware.test@1.0-service.rc"],
+    srcs: [
+        "Test.cpp",
+        "service.cpp",
+    ],
+    shared_libs: [
+        "libhidlbase",
+        "libhidltransport",
+        "libutils",
+        "libbase",
+        "liblog",
+        "android.hardware.test@1.0",
+    ],
+}

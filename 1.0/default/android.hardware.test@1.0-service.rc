@@ -1,0 +1,4 @@
+service testhal /vendor/bin/hw/android.hardware.test@1.0-service
+    class hal
+    user root
+    group root
