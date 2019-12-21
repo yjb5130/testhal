@@ -12,8 +12,12 @@ int main(){
         ALOGE("Can't find ITest service...");
         return -1;
     }
-    ALOGE("ITest test");
+    ALOGD("ITest test");
     service->testhal();
+
+    service->setIntValue(11);
+    int value = service->getIntValue();
+    ALOGD("service->getIntValue: %d\n", value);
 
     return 0;
 }

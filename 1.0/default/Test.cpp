@@ -11,7 +11,7 @@ namespace implementation {
 
 Test::Test()
 {
-
+    mIntValue = 0;
 }
 
 Test::~Test()
@@ -23,9 +23,23 @@ Test::~Test()
 // Methods from ITest follow.
 Return<void> Test::testhal() {
     // TODO implement
-    ALOGE("Hidl Test::testhal()");
+    ALOGD("Hidl Test::testhal()");
     return Void();
 }
+
+Return<int32_t> Test::setIntValue(int32_t value)
+{
+    mIntValue = value;
+    ALOGD("Hidl Test::setIntValue: %d\n", value);
+    return 0;
+}
+
+Return<int32_t> Test::getIntValue()
+{
+    ALOGD("Hidl Test::getIntValue: %d\n", mIntValue);
+    return mIntValue;
+}
+
 
 
 // Methods from ::android::hidl::base::V1_0::IBase follow.

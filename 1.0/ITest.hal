@@ -3,4 +3,6 @@ package android.hardware.test@1.0;
 interface ITest
 {
     testhal();
+    setIntValue(int32_t value) generates (int32_t status);
+    getIntValue() generates (int32_t value);
 };

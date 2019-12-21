@@ -27,7 +27,11 @@ public:
 
     // Methods from ITest follow.
     Return<void> testhal() override;
+    Return<int32_t> setIntValue(int32_t value) override;
+    Return<int32_t> getIntValue() override;
 
+private:
+    int32_t mIntValue;
     // Methods from ::android::hidl::base::V1_0::IBase follow.
 
 };
