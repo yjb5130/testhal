@@ -16,8 +16,13 @@ int main(){
     service->testhal();
 
     service->setIntValue(11);
-    int value = service->getIntValue();
-    ALOGD("service->getIntValue: %d\n", value);
+    int s32Value = service->getIntValue();
+    ALOGD("service->getIntValue: %d\n", s32Value);
+
+
+    service->setLongValue(123456789123456789l);
+    long long s64Value = service->getLongValue();
+    ALOGD("service->getLongValue: %lld\n", s64Value);
 
     return 0;
 }

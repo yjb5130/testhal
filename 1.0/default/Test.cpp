@@ -40,6 +40,18 @@ Return<int32_t> Test::getIntValue()
     return mIntValue;
 }
 
+Return<int64_t> Test::setLongValue(int64_t value)
+{
+    mLongValue = value;
+    ALOGD("Hidl Test::setLongValue: %lld\n", value);
+    return 0;
+}
+
+Return<int64_t> Test::getLongValue()
+{
+    ALOGD("Hidl Test::getLongValue: %lld\n", mLongValue);
+    return mLongValue;
+}
 
 
 // Methods from ::android::hidl::base::V1_0::IBase follow.

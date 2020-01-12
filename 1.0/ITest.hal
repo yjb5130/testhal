@@ -5,4 +5,7 @@ interface ITest
     testhal();
     setIntValue(int32_t value) generates (int32_t status);
     getIntValue() generates (int32_t value);
+    setLongValue(int64_t value) generates (int64_t status);
+    getLongValue() generates (int64_t value);
+
 };
