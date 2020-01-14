@@ -29,12 +29,24 @@ public:
     Return<void> testhal() override;
     Return<int32_t> setIntValue(int32_t value) override;
     Return<int32_t> getIntValue() override;
-    Return<int64_t> setLongValue(int64_t value) override;
+    Return<int32_t> setLongValue(int64_t value) override;
     Return<int64_t> getLongValue() override;
+    Return<int32_t> setCharValue(int8_t value) override;
+    Return<int8_t>  getCharValue() override;
+    Return<int32_t> setShortValue(int16_t value) override;
+    Return<int16_t> getShortValue() override;
+    Return<int32_t> setFloatValue(float value) override;
+    Return<float>   getFloatValue() override;
+    Return<int32_t> setDoubleValue(double value) override;
+    Return<double>  getDoubleValue() override;
 
 private:
     int32_t mIntValue;
     int64_t mLongValue;
+    int8_t  mCharValue;
+    int16_t mShortValue;
+    float   mFloatValue;
+    double  mDoubleValue;
     // Methods from ::android::hidl::base::V1_0::IBase follow.
 
 };

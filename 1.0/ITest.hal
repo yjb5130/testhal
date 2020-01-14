@@ -5,7 +5,15 @@ interface ITest
     testhal();
     setIntValue(int32_t value) generates (int32_t status);
     getIntValue() generates (int32_t value);
-    setLongValue(int64_t value) generates (int64_t status);
+    setLongValue(int64_t value) generates (int32_t status);
     getLongValue() generates (int64_t value);
+    setCharValue(int8_t value) generates (int32_t status);
+    getCharValue() generates (int8_t value);
+    setShortValue(int16_t value) generates (int32_t status);
+    getShortValue() generates (int16_t value);
+    setFloatValue(float value) generates (int32_t status);
+    getFloatValue() generates (float value);
+    setDoubleValue(double value) generates (int32_t status);
+    getDoubleValue() generates (double value);
 
 };
